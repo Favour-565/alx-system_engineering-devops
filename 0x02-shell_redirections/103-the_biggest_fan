@@ -1,0 +1,2 @@
+#!/bin/bash
+filename="$1"; hosts=$(tail -n +2 "$filename" | cut -f 1 | sort | uniq -c | sort -rn); echo "$hosts" | head -n 11 | awk '{print $2}' | rev
